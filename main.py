@@ -48,7 +48,7 @@ async def on_member_join(member: discord.Member):
             "• Web sitesi yazılım & geliştirme\n"
             "• E-ticaret sistemleri\n"
             "• Özel Discord bot geliştirme\n"
-            "• FiveM & Minecraft çözümleri"
+            "• Plugin & Plugin Paketleri"
         ),
         inline=False
     )
