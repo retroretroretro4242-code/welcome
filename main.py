@@ -35,14 +35,14 @@ async def on_member_join(member: discord.Member):
 
     embed = discord.Embed(
         title=f"👋 Hoş geldin, {member.name}!",
-        description="**Atlas Projects** ailesine katıldığın için mutluyuz.",
+        description="**PRX | Prime Raiders** ailesine katıldığın için mutluyuz. Biz bir e-spor takımıyız ve seni takımımızda görmek için sabırsızlanıyoruz!",
         color=discord.Color.blurple()
     )
 
     # Üye avatarı (solda)
     embed.set_thumbnail(url=member.display_avatar.url)
 
-   embed.add_field(
+    embed.add_field(
         name="🌐 Takım Olanaklarımız",
         value=(
             "• Profesyonel e-spor deneyimi\n"
@@ -60,7 +60,7 @@ async def on_member_join(member: discord.Member):
     )
 
     embed.set_footer(
-        text=f"{member.guild.name} • Atlas Projects"
+        text=f"{member.guild.name} • PRX | Prime Raiders"
     )
 
     # =========================
@@ -82,7 +82,9 @@ async def on_member_join(member: discord.Member):
             content=(
                 f"👋 {member.name}, {member.guild.name} sunucusuna hoş geldin! "
                 "PRX ekibi seni rekabetçi oyunlarda ve turnuvalarda görmek için sabırsızlanıyor!"
-            )
+            ),
+            embed=embed
+        )
     except discord.Forbidden:
         print(f"{member} DM kapalı.")
 
