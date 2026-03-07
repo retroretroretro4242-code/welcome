@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
-WELCOME_CHANNEL_ID = 1478328986013667338
+WELCOME_CHANNEL_ID = 1479868699463913789
 
 # =========================
 # BOT INTENTS
@@ -42,20 +42,20 @@ async def on_member_join(member: discord.Member):
     # Üye avatarı (solda)
     embed.set_thumbnail(url=member.display_avatar.url)
 
-    embed.add_field(
-        name="🌐 Hizmetlerimiz",
+   embed.add_field(
+        name="🌐 Takım Olanaklarımız",
         value=(
-            "• Web sitesi yazılım & geliştirme\n"
-            "• E-ticaret sistemleri\n"
-            "• Özel Discord bot geliştirme\n"
-            "• Plugin & Plugin Paketleri"
+            "• Profesyonel e-spor deneyimi\n"
+            "• Düzenli turnuvalar ve antrenmanlar\n"
+            "• Özel Discord topluluğu\n"
+            "• Takım koçluğu & rehberlik"
         ),
         inline=False
     )
 
     embed.add_field(
-        name="🚀 Deneyim",
-        value="10+ yıl tecrübe • 200+ sunucu • 3000+ sipariş",
+        name="🚀 Başarılarımız",
+        value="10+ yıl e-spor tecrübesi • 200+ turnuva • 3000+ aktif oyuncu",
         inline=False
     )
 
@@ -79,9 +79,10 @@ async def on_member_join(member: discord.Member):
     # =========================
     try:
         await member.send(
-            content=f"👋 {member.name}, {member.guild.name} sunucusuna hoş geldin!",
-            embed=embed
-        )
+            content=(
+                f"👋 {member.name}, {member.guild.name} sunucusuna hoş geldin! "
+                "PRX ekibi seni rekabetçi oyunlarda ve turnuvalarda görmek için sabırsızlanıyor!"
+            )
     except discord.Forbidden:
         print(f"{member} DM kapalı.")
 
